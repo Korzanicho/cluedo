@@ -1,0 +1,1 @@
+{"version":3,"sources":["__game.sass"],"names":[],"mappings":"AAAA,M,CACC,qB,CACA,a,CACA,a","file":"style.min.css","sourcesContent":["canvas {\n\tborder: 1px solid #000;\n\tdisplay: block;\n\tmargin: 0 auto; }\n"]}
