@@ -52,7 +52,12 @@ const vm = new Vue({
 			this.activeClass(e);
 		},
 		draw : function(e){
-			e.target.setAttribute('style', this.tool);
+
+			if(e.target.attributes.style.nodeValue == this.tool){
+				console.log(e.target.attributes.style.nodeValue);
+				e.target.setAttribute('style', 'background: transparent');
+			}
+			else e.target.setAttribute('style', this.tool);
 		},
 		activeClass: function(e){
 			let squares = document.querySelectorAll('.kit__square > div');

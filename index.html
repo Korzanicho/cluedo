@@ -15,17 +15,17 @@
 
         <div class="tab">
             <h3>Kto?</h3>
-            <hr>
+            
             <table>
                 <tr v-for='suspect in suspects'>
-                    <th>{{ suspect }}</th><td><div class="square" @click='draw'></div></div></td>
+                    <th>{{ suspect }}</th><td><div class="square" @click='draw' style='background: transparent;'></div></div></td>
                 </tr>
             </table>
         </div>
 
         <div class="tab">
             <h3>Gdzie?</h3>
-            <hr>
+            
             <table>
                 <tr v-for='room in rooms'>
                     <th>{{ room }}</th><td><div class="square" @click='draw'></div></td>
@@ -35,7 +35,7 @@
 
         <div class="tab">
             <h3>Czym?</h3>
-            <hr>
+            
             <table>
                 <tr v-for='weapon in weapons'>
                     <th>{{ weapon }}</th><td><div class="square" @click='draw'></div></td>
