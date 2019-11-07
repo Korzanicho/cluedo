@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cluedo</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -15,81 +15,38 @@
 
         <div class="tab">
             <h3>Kto?</h3>
+            <hr>
             <table>
-                <tr>
-                    <th>Zielińska</th><td><div class="square"></div></td>
-                </tr>
-                <tr>
-                    <th>Żółtkowski</th><td><div class="square"></div></td>
+                <tr v-for='suspect in suspects'>
+                    <th>{{ suspect }}</th><td><div class="square" @click='draw'></div></div></td>
                 </tr>
             </table>
         </div>
 
         <div class="tab">
             <h3>Gdzie?</h3>
+            <hr>
             <table>
-                <tr>
-                    <th>Zielińska</th><td><div class="square"></div></td>
-                </tr>
-                <tr>
-                    <th>Żółtkowski</th><td><div class="square"></div></td>
+                <tr v-for='room in rooms'>
+                    <th>{{ room }}</th><td><div class="square" @click='draw'></div></td>
                 </tr>
             </table>
         </div>
 
         <div class="tab">
             <h3>Czym?</h3>
+            <hr>
             <table>
-                <tr>
-                    <th>Zielińska</th><td><div class="square"></div></td>
-                </tr>
-                <tr>
-                    <th>Żółtkowski</th><td><div class="square"></div></td>
+                <tr v-for='weapon in weapons'>
+                    <th>{{ weapon }}</th><td><div class="square" @click='draw'></div></td>
                 </tr>
             </table>
         </div>
 
         <div class="kit">
-            <div class="kit__square"><div class="kit__color--yellow active" :data-tool="tools[0]" @click='activeTool'></div></div>
-            <div class="kit__square"><div class="kit__color--green" :data-tool='tools[1]'></div></div>
-            <div class="kit__square"></div>
-            <div class="kit__square"></div>
-            <div class="kit__square"></div>
-            <div class="kit__square"></div>
-            <div class="kit__square"></div>
+            <div class='kit__square' v-for='(value, name) in tools'><div :style='tools[name]' :data-tool='name' @click='activeTool'></div> </div>
         </div>
 
-
-
-
-        <div class="tictocwrapper" :key="ticTocKey">
-            <!-- <div class="square" @click="writeXorO" v-for="i in 9" :id="i"></div> -->
-            <div id="1" class="square" @click="writeXOrO"></div>
-            <div id="2" class="square" @click="writeXOrO"></div>
-            <div id="3" class="square" @click="writeXOrO"></div>
-            <div id="4" class="square" @click="writeXOrO"></div>
-            <div id="5" class="square" @click="writeXOrO"></div>
-            <div id="6" class="square" @click="writeXOrO"></div>
-            <div id="7" class="square" @click="writeXOrO"></div>
-            <div id="8" class="square" @click="writeXOrO"></div>
-            <div id="9" class="square" @click="writeXOrO"></div>
-        </div>
-        <div class="rightside">
-            <p v-show="!winner">Teraz Kolej: {{write}}</p>
-            <h2>{{winner}}</h2>
-            <div class="tableScore">
-                <span>Tablica Wyników</span>
-                <table>
-                    <tr>
-                        <th>X</th><th>O</th>
-                    </tr>
-                    <tr>
-                        <td>{{xScore}}</td><td>{{oScore}}</td>
-                    </tr>
-                </table>
-            </div>
-            <button @click="newGame">Nowa Gra</button>
-        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="./js/main.js"></script>
