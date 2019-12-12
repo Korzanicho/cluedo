@@ -20,29 +20,30 @@ const vm = new Vue({
 			colorPink: 'background-color: #FFC0CB',
 		},
 		suspects: [
-			'Panna Czerwińska', 
-			'Profesor Śliwiński',
-			'Pani Pawińska',
-			'Ksiądz Zieliński',
-			'Półkownik Żółtkowski',
-			'Pani Bielecka'
+			'Green', 
+			'Mustard',
+			'Orchid',
+			'Peacock',
+			'Plum',
+			'Scarlett'
 		],
 		weapons: [
-			'Lina',
 			'Świecznik',
+			'Sztylet',
 			'Metalowa rurka',
 			'Reworwer',
-			'Sztylet'
+			'Lina',
+			'Klucz francuski'
 		],
 		rooms: [
-			'Sala Balowa',
-			'Sala Bilardowa',
-			'Jadalnia',
-			'Kuchnia',
 			'Salon',
+			'Sala Bilardowa',
+			'Ogród zimowy',
+			'Jadalnia',
 			'Hol',
-			'Weranda',
+			'Kuchnia',
 			'Biblioteka',
+			'Weranda',
 			'Gabinet'
 		]
 	},
