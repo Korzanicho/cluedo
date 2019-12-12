@@ -13,10 +13,11 @@ const vm = new Vue({
 			kitYellow: 'background-color: #a7991d',
 			colorGreen: 'background-color: #22a71d',
 			colorRed: 'background-color: #a71d1d',
-			colorPurple: 'background-color: #901da7',
+			colorPurple: 'background-color: #6A0DAD',
 			colorBlue: 'background-color: #1d1fa7',
 			colorWhite: 'background-color: #f3eded',
 			colorBlack: 'background-color: #000',
+			colorPink: 'background-color: #FFC0CB',
 		},
 		suspects: [
 			'Panna Czerwińska', 
